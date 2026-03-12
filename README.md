@@ -1,10 +1,10 @@
-# AI Roadmap — From Zero to Autonomous Racing
+# AI Roadmap — Od Zera do Autonomicznych Wyścigów
 
-I taught myself AI. Built 6 projects — from Snake to an autonomous race car that drives on real hardware. This is the path I'd recommend if I started over.
+Nauczyłem się AI sam. Zbudowałem 6 projektów — od Snake'a po autonomiczny samochód wyścigowy jeżdżący na prawdziwym sprzęcie. To ścieżka, którą bym polecił, gdybym zaczynał od nowa.
 
 ```mermaid
 graph LR
-    A[Python\nFoundations] --> B[How AI\nWorks] --> C[First AI\nProject] --> D[Deep RL] --> E[Continuous\nControl] --> F[LLMs &\nAI Tools]
+    A[Podstawy\nPythona] --> B[Jak działa\nAI] --> C[Pierwszy\nprojekt AI] --> D[Deep RL] --> E[Sterowanie\nciągłe] --> F[LLM-y i\nnarzędzia AI]
     C -.- C1[Flappy Bird]
     C -.- C2[Snake BC]
     D -.- D1[Snake DQN]
@@ -15,157 +15,157 @@ graph LR
 
 ---
 
-## Stage 0: Python Foundations
+## Etap 0: Podstawy Pythona
 
-**Time:** 1-2 weeks
+**Czas:** 1-2 tygodnie
 
-You don't need a CS degree. You need to be comfortable with Python — loops, functions, classes, and a few libraries. That's it.
+Nie potrzebujesz dyplomu z informatyki. Musisz czuć się swobodnie z Pythonem — pętle, funkcje, klasy i kilka bibliotek. Tyle.
 
-**What to learn:**
-- Python basics + OOP (classes, inheritance)
-- NumPy (array math — you'll use it everywhere)
-- Matplotlib (plotting training curves, debugging visually)
+**Czego się nauczyć:**
+- Podstawy Pythona + OOP (klasy, dziedziczenie)
+- NumPy (operacje na tablicach — będziesz tego używać wszędzie)
+- Matplotlib (wykresy krzywych treningowych, wizualny debugging)
 
-**Resources:**
-- [Kaggle Learn Python](https://www.kaggle.com/learn/python) — free, interactive, no setup required
-- [CS50P by Harvard](https://cs50.harvard.edu/python/) — more rigorous if you want stronger fundamentals
+**Materiały:**
+- [Kaggle Learn Python](https://www.kaggle.com/learn/python) — darmowy, interaktywny, zero konfiguracji
+- [CS50P by Harvard](https://cs50.harvard.edu/python/) — bardziej rygorystyczny, jeśli chcesz mocniejsze fundamenty
 
-**Skip if:** You can write a class, use list comprehensions, and plot a sine wave with matplotlib without Googling the basics.
-
----
-
-## Stage 1: How AI Actually Works
-
-**Time:** 2 weeks
-
-Don't touch code yet. Build intuition first. Understand what a neural network does before you build one — it'll save you weeks of confusion later.
-
-**Resources:**
-- [3Blue1Brown — Neural Networks](https://www.youtube.com/playlist?list=PLZHQObOWTQDNU6R1_67000Dx_ZCJB-3pi) — the best visual explanation of how neural nets learn. Watch all 4 videos.
-- [StatQuest](https://www.youtube.com/@statquest) — strips ML concepts down to the basics. Great for "I read the paper and understood nothing."
-- [Andrej Karpathy](https://www.youtube.com/@AndrejKarpathy) — his "Deep Dive into LLMs" talk gives you the big picture of where the field is heading
-
-**Concepts you must understand before moving on:**
-- What a model is (a function with learnable parameters)
-- Training = adjusting parameters to minimize a loss function
-- Gradient descent = how those adjustments happen
-- Overfitting = memorizing instead of learning
+**Pomiń, jeśli:** Potrafisz napisać klasę, użyć list comprehension i narysować sinusoidę w matplotlib bez googlowania podstaw.
 
 ---
 
-## Stage 2: Your First AI Project
+## Etap 1: Jak AI Naprawdę Działa
 
-**Time:** 4 weeks
+**Czas:** 2 tygodnie
 
-Two courses, two approaches. Do both — they complement each other.
+Jeszcze nie dotykaj kodu. Najpierw zbuduj intuicję. Zrozum, co robi sieć neuronowa, zanim ją napiszesz — to oszczędzi ci tygodni frustracji.
 
-**Resources:**
-- [fast.ai](https://course.fast.ai/) — top-down: run working code first, understand theory later. Gets you building fast.
-- [Karpathy — Neural Networks: Zero to Hero](https://github.com/karpathy/nn-zero-to-hero) (first 3 lectures) — bottom-up: build a neural net from scratch in pure Python. Painful but unforgettable.
+**Materiały:**
+- [3Blue1Brown — Neural Networks](https://www.youtube.com/playlist?list=PLZHQObOWTQDNU6R1_67000Dx_ZCJB-3pi) — najlepsza wizualna prezentacja tego, jak sieci neuronowe się uczą. Obejrzyj wszystkie 4 filmy.
+- [StatQuest](https://www.youtube.com/@statquest) — rozbija koncepty ML na czynniki pierwsze. Idealne, gdy przeczytałeś paper i nic nie zrozumiałeś.
+- [Andrej Karpathy](https://www.youtube.com/@AndrejKarpathy) — jego "Deep Dive into LLMs" daje szeroki obraz tego, dokąd zmierza cała dziedzina
 
-Then build something. Don't follow a tutorial — pick a game, a dataset, a problem, and make it work.
+**Koncepty, które musisz zrozumieć, zanim pójdziesz dalej:**
+- Czym jest model (funkcja z uczącymi się parametrami)
+- Trening = dopasowywanie parametrów, żeby zminimalizować loss function
+- Gradient descent = mechanizm tych dopasowań
+- Overfitting = zapamiętywanie zamiast uczenia się
+
+---
+
+## Etap 2: Twój Pierwszy Projekt AI
+
+**Czas:** 4 tygodnie
+
+Dwa kursy, dwa podejścia. Zrób oba — wzajemnie się uzupełniają.
+
+**Materiały:**
+- [fast.ai](https://course.fast.ai/) — podejście top-down: najpierw działający kod, teoria potem. Szybko budujesz.
+- [Karpathy — Neural Networks: Zero to Hero](https://github.com/karpathy/nn-zero-to-hero) (pierwsze 3 wykłady) — podejście bottom-up: budujesz sieć neuronową od zera w czystym Pythonie. Bolesne, ale niezapomniane.
+
+Potem zbuduj coś. Nie podążaj za tutorialem — wybierz grę, dataset, problem i spraw, żeby to działało.
 
 ---
 
 ### 🏆 CHECKPOINT: Flappy Bird AI
 
-**Dueling Double DQN with NoisyNet exploration**
+**Dueling Double DQN z eksploracją NoisyNet**
 
 [![Repo](https://img.shields.io/badge/GitHub-flappy--bird--ai-blue)](https://github.com/Beba-ai-ml/flappy-bird-ai)
 
 ![Flappy Bird AI](assets/flappy_bird.gif)
 
-Your first RL project should be simple enough to debug but complex enough to learn real concepts. Flappy Bird hits that sweet spot.
+Twój pierwszy projekt RL powinien być wystarczająco prosty do debugowania, ale wystarczająco złożony, żeby nauczyć prawdziwych konceptów. Flappy Bird trafia w ten punkt.
 
-- **What it teaches:** DQN fundamentals, reward shaping, exploration vs exploitation
-- **Architecture:** MLP variant (51K params) learns in 5-20K episodes. CNN variant (2.2M params) learns directly from pixels.
-- **Key lesson:** Reward shaping matters more than model size. A well-shaped reward with a tiny network beats a massive network with a naive reward.
+- **Czego uczy:** Podstawy DQN, reward shaping, exploration vs exploitation
+- **Architektura:** Wariant MLP (51K parametrów) uczy się w 5-20K epizodów. Wariant CNN (2.2M parametrów) uczy się bezpośrednio z pikseli.
+- **Kluczowa lekcja:** Reward shaping ma większe znaczenie niż rozmiar modelu. Dobrze zaprojektowana nagroda z malutką siecią bije ogromną sieć z naiwną nagrodą.
 
 ---
 
 ### 🏆 CHECKPOINT: Snake — Behavioral Cloning
 
-**Learn to imitate before you learn to explore**
+**Naucz się naśladować, zanim nauczysz się eksplorować**
 
 [![Repo](https://img.shields.io/badge/GitHub-snake--behavioral--cloning-blue)](https://github.com/Beba-ai-ml/snake-behavioral-cloning)
 
 ![Snake Behavioral Cloning](assets/snake_bc.gif)
 
-Before you go deep into RL, understand supervised learning from demonstrations. Record a human playing, train a model to copy them. Simple, fast, and teaches you the data pipeline.
+Zanim wejdziesz głęboko w RL, zrozum supervised learning z demonstracji. Nagraj człowieka grającego, wytrenuj model, żeby go kopiował. Proste, szybkie i uczy pipeline'u danych.
 
-- **What it teaches:** Supervised learning, data collection, train/val splits, when imitation fails
-- **Key lesson:** BC is fast to set up but has a hard ceiling — the model can't surpass the demonstrator. That's why you need RL.
+- **Czego uczy:** Supervised learning, zbieranie danych, podział train/val, kiedy imitacja zawodzi
+- **Kluczowa lekcja:** BC jest szybkie w konfiguracji, ale ma twardy sufit — model nie przeskoczy poziomu demonstratora. Dlatego potrzebujesz RL.
 
 ---
 
-## Stage 3: Deep Reinforcement Learning
+## Etap 3: Deep Reinforcement Learning
 
-**Time:** 6 weeks
+**Czas:** 6 tygodni
 
-Now you go deeper. Move beyond vanilla DQN — learn the tricks that make RL actually work.
+Teraz idziesz głębiej. Wyjdź poza podstawowe DQN — poznaj triki, które sprawiają, że RL naprawdę działa.
 
-**Resources:**
-- [OpenAI Spinning Up](https://spinningup.openai.com/) — the best written intro to RL algorithms. Read the theory, study the code.
-- [Hugging Face Deep RL Course](https://huggingface.co/learn/deep-rl-course/) — hands-on, with environments to train in directly
+**Materiały:**
+- [OpenAI Spinning Up](https://spinningup.openai.com/) — najlepiej napisane wprowadzenie do algorytmów RL. Czytaj teorię, analizuj kod.
+- [Hugging Face Deep RL Course](https://huggingface.co/learn/deep-rl-course/) — praktyczny, z gotowymi środowiskami do trenowania
 
 ---
 
 ### 🏆 CHECKPOINT: Snake DQN Multi-Env
 
-**Double DQN on a grid world, trained across multiple environments**
+**Double DQN na grid world, trenowany na wielu środowiskach**
 
 [![Repo](https://img.shields.io/badge/GitHub-snake--dqn--multi--env-blue)](https://github.com/Beba-ai-ml/snake-dqn-multi-env)
 
 ![Snake DQN](assets/snake_dqn.gif)
 
-Same game, fundamentally different approach. Now the agent learns on its own through trial and error — and generalizes across different grid sizes.
+Ta sama gra, zupełnie inne podejście. Teraz agent uczy się sam metodą prób i błędów — i generalizuje na różne rozmiary planszy.
 
-- **What it teaches:** Experience replay buffers, target networks, multi-environment training for generalization
-- **Key lesson:** Training on one environment makes a brittle agent. Training on many makes a robust one.
+- **Czego uczy:** Experience replay buffer, target networks, trening na wielu środowiskach dla generalizacji
+- **Kluczowa lekcja:** Trening na jednym środowisku daje kruchego agenta. Trening na wielu daje solidnego.
 
 ---
 
 ### 🏆 CHECKPOINT: Tetris AI
 
-**Afterstate V-Learning — 1,766 lines cleared in a single game**
+**Afterstate V-Learning — 1766 linii wyczyszczonych w jednej grze**
 
 [![Repo](https://img.shields.io/badge/GitHub-tetris--ai-blue)](https://github.com/Beba-ai-ml/tetris-ai)
 
 ![Tetris AI](assets/tetris.gif)
 
-This is where you learn that standard DQN doesn't always cut it. Tetris has a massive action space, and naive approaches plateau fast. The afterstate trick — evaluating board states after piece placement instead of action-value pairs — gave a **17.7x improvement** over standard DQN.
+Tu się uczysz, że standardowe DQN nie zawsze wystarczy. Tetris ma ogromną przestrzeń akcji, a naiwne podejścia szybko się nasycają. Trik z afterstate — ocenianie stanów planszy po postawieniu klocka zamiast par akcja-wartość — dał **17.7x poprawę** nad standardowym DQN.
 
-- **What it teaches:** Going beyond textbook algorithms, custom architectures, reward engineering
-- **Stats:** Best game cleared 1,766 lines. Afterstate approach vs standard DQN isn't even close.
-- **Key lesson:** The biggest gains in AI come from thinking about the problem differently, not from bigger models.
+- **Czego uczy:** Wychodzenie poza podręcznikowe algorytmy, niestandardowe architektury, inżynieria nagród
+- **Statystyki:** Najlepsza gra wyczyściła 1766 linii. Afterstate vs standardowe DQN — nie ma porównania.
+- **Kluczowa lekcja:** Największe skoki w AI biorą się z innego myślenia o problemie, nie z większych modeli.
 
 ---
 
-## Stage 4: Continuous Control & Sim-to-Real
+## Etap 4: Sterowanie Ciągłe i Sim-to-Real
 
-**Time:** 8+ weeks
+**Czas:** 8+ tygodni
 
-Everything before this used discrete actions — left, right, jump. Now you work with continuous values: steering angles, throttle percentages. This is a different beast.
+Wszystko do tej pory używało dyskretnych akcji — lewo, prawo, skok. Teraz pracujesz z wartościami ciągłymi: kąty skrętu, procent gazu. To zupełnie inna liga.
 
-**Resources:**
-- [SAC Paper](https://arxiv.org/abs/1801.01290) (Haarnoja et al.) — read it. SAC is the workhorse algorithm for continuous control.
-- [Dive into Deep Learning](https://d2l.ai/) — free textbook, excellent for filling gaps in your understanding
+**Materiały:**
+- [SAC Paper](https://arxiv.org/abs/1801.01290) (Haarnoja et al.) — przeczytaj go. SAC to koń roboczy sterowania ciągłego.
+- [Dive into Deep Learning](https://d2l.ai/) — darmowy podręcznik, świetny do uzupełniania luk w wiedzy
 
 ---
 
 ### 🏆 CHECKPOINT: Occupancy Racer SAC
 
-**Autonomous racing with 450-ray LiDAR, trained on 40 procedural maps**
+**Autonomiczne wyścigi z 450-promieniowym LiDAR-em, trenowane na 40 proceduralnych mapach**
 
 [![Repo](https://img.shields.io/badge/GitHub-occupancy--racer--sac2-blue)](https://github.com/Beba-ai-ml/occupancy-racer-sac2)
 
 ![Occupancy Racer](assets/occupancy_racer.gif)
 
-This is the project where everything came together. A 6.65M parameter SAC agent, 32 CPU actors feeding experience to a GPU learner, trained across 40 randomized maps.
+To jest projekt, w którym wszystko się połączyło. Agent SAC z 6.65M parametrów, 32 aktorów CPU karmiących doświadczeniem GPU learner, trenowany na 40 losowych mapach.
 
-- **What it teaches:** SAC algorithm, continuous action spaces, async multi-process training, domain randomization
-- **Architecture:** 32 parallel CPU actors + 1 GPU learner, 450-ray LiDAR input, ~300K steps to converge
-- **Key lesson:** Scaling training across multiple processes and environments is what separates toy projects from real ones.
+- **Czego uczy:** Algorytm SAC, ciągła przestrzeń akcji, asynchroniczny trening wieloprocesowy, domain randomization
+- **Architektura:** 32 równoległe aktory CPU + 1 GPU learner, wejście 450-promieniowy LiDAR, ~300K kroków do zbieżności
+- **Kluczowa lekcja:** Skalowanie treningu na wiele procesów i środowisk to różnica między projektami-zabawkami a prawdziwymi.
 
 ![Training Curve](assets/training_curve.png)
 
@@ -173,63 +173,63 @@ This is the project where everything came together. A 6.65M parameter SAC agent,
 
 ### 🏆 CHECKPOINT: ROS2 F1TENTH
 
-**Deployed on real hardware — Jetson Nano, real LiDAR, real car**
+**Wdrożony na prawdziwym sprzęcie — Jetson Nano, prawdziwy LiDAR, prawdziwy samochód**
 
 [![Repo](https://img.shields.io/badge/GitHub-ros2__ws2-blue)](https://github.com/Beba-ai-ml/ros2_ws2)
 
-The moment your model drives a real car is when everything clicks. Sim-to-real transfer is its own discipline — sensor noise, latency, mechanical imperfections. Everything your simulation ignored comes back to bite you.
+Moment, w którym twój model prowadzi prawdziwy samochód — wtedy wszystko klika. Sim-to-real transfer to osobna dyscyplina — szum sensorów, opóźnienia, mechaniczne niedoskonałości. Wszystko, co twoja symulacja zignorowała, wraca ze zdwojoną siłą.
 
-- **What it teaches:** Sim-to-real transfer, ROS2 integration, real-time inference on edge hardware
-- **Key lesson:** A model that works perfectly in simulation will fail on real hardware. Domain randomization during training is what bridges the gap.
-
----
-
-## Stage 5: LLMs & AI Tools
-
-This is a different branch of AI, not a continuation of RL. Mentioning it because it's where most practical value is right now.
-
-- Watch Karpathy's "Deep Dive into LLMs like ChatGPT" for the technical foundation
-- Learn prompt engineering and API usage — these are practical skills with immediate payoff
-- Build something that uses an LLM API: a tool, a workflow, an assistant
-
-AI isn't just about training models — it's about knowing when to use existing ones. Most real-world problems don't need a custom model. They need someone who understands AI well enough to pick the right tool.
-
-No project checkpoint here. This stage is about applying AI, not building from scratch.
+- **Czego uczy:** Sim-to-real transfer, integracja z ROS2, wnioskowanie w czasie rzeczywistym na sprzęcie brzegowym
+- **Kluczowa lekcja:** Model, który idealnie działa w symulacji, zawiedzie na prawdziwym sprzęcie. Domain randomization podczas treningu jest tym, co łączy te dwa światy.
 
 ---
 
-## Resources
+## Etap 5: LLM-y i Narzędzia AI
 
-| Resource | Type | Best For | Link |
-|----------|------|----------|------|
-| Kaggle Learn Python | Course | Python basics, interactive | [kaggle.com](https://www.kaggle.com/learn/python) |
-| CS50P | Course | Rigorous Python foundations | [cs50.harvard.edu](https://cs50.harvard.edu/python/) |
-| 3Blue1Brown Neural Nets | Video | Visual intuition for neural networks | [YouTube](https://www.youtube.com/playlist?list=PLZHQObOWTQDNU6R1_67000Dx_ZCJB-3pi) |
-| StatQuest | Video | ML concepts explained simply | [YouTube](https://www.youtube.com/@statquest) |
-| fast.ai | Course | Top-down, build-first approach | [course.fast.ai](https://course.fast.ai/) |
-| Karpathy Zero to Hero | Course | Bottom-up, build from scratch | [GitHub](https://github.com/karpathy/nn-zero-to-hero) |
-| OpenAI Spinning Up | Guide | RL theory and implementation | [spinningup.openai.com](https://spinningup.openai.com/) |
-| HuggingFace Deep RL | Course | Hands-on RL with environments | [huggingface.co](https://huggingface.co/learn/deep-rl-course/) |
-| SAC Paper | Paper | Continuous control algorithm | [arxiv.org](https://arxiv.org/abs/1801.01290) |
-| Dive into Deep Learning | Book | Filling knowledge gaps, reference | [d2l.ai](https://d2l.ai/) |
+To inna gałąź AI, nie kontynuacja RL. Wspominam o tym, bo tu jest teraz największa praktyczna wartość.
+
+- Obejrzyj Karpathy'ego "Deep Dive into LLMs like ChatGPT" dla technicznego fundamentu
+- Naucz się prompt engineeringu i korzystania z API — to praktyczne umiejętności z natychmiastowym zwrotem
+- Zbuduj coś, co używa LLM API: narzędzie, workflow, asystenta
+
+AI to nie tylko trenowanie modeli — to wiedza, kiedy użyć istniejących. Większość realnych problemów nie potrzebuje custom modelu. Potrzebuje kogoś, kto rozumie AI wystarczająco dobrze, żeby wybrać odpowiednie narzędzie.
+
+Brak checkpointu projektowego. Ten etap to stosowanie AI, nie budowanie od zera.
 
 ---
 
-## The Progression
+## Materiały
+
+| Zasób | Typ | Najlepsze do | Link |
+|-------|-----|--------------|------|
+| Kaggle Learn Python | Kurs | Podstawy Pythona, interaktywny | [kaggle.com](https://www.kaggle.com/learn/python) |
+| CS50P | Kurs | Solidne fundamenty Pythona | [cs50.harvard.edu](https://cs50.harvard.edu/python/) |
+| 3Blue1Brown Neural Nets | Wideo | Wizualna intuicja sieci neuronowych | [YouTube](https://www.youtube.com/playlist?list=PLZHQObOWTQDNU6R1_67000Dx_ZCJB-3pi) |
+| StatQuest | Wideo | Koncepty ML wyjaśnione prosto | [YouTube](https://www.youtube.com/@statquest) |
+| fast.ai | Kurs | Top-down, najpierw buduj | [course.fast.ai](https://course.fast.ai/) |
+| Karpathy Zero to Hero | Kurs | Bottom-up, buduj od zera | [GitHub](https://github.com/karpathy/nn-zero-to-hero) |
+| OpenAI Spinning Up | Poradnik | Teoria i implementacja RL | [spinningup.openai.com](https://spinningup.openai.com/) |
+| HuggingFace Deep RL | Kurs | Praktyczne RL ze środowiskami | [huggingface.co](https://huggingface.co/learn/deep-rl-course/) |
+| SAC Paper | Paper | Algorytm sterowania ciągłego | [arxiv.org](https://arxiv.org/abs/1801.01290) |
+| Dive into Deep Learning | Książka | Uzupełnianie luk, referencja | [d2l.ai](https://d2l.ai/) |
+
+---
+
+## Progresja
 
 ```
-Flappy Bird (beginner) → Snake BC (beginner) → Snake DQN (intermediate) →
-Tetris (advanced) → Occupancy Racer (advanced) → Real Car (expert)
+Flappy Bird (początkujący) → Snake BC (początkujący) → Snake DQN (średniozaawansowany) →
+Tetris (zaawansowany) → Occupancy Racer (zaawansowany) → Prawdziwy Samochód (ekspert)
 ```
 
-Each project taught me something the previous one couldn't. Flappy Bird taught me RL basics. Snake BC showed me supervised learning's ceiling. Snake DQN taught me generalization. Tetris forced me to think beyond standard algorithms. The Racer made me scale. The real car humbled me.
+Każdy projekt nauczył mnie czegoś, czego poprzedni nie mógł. Flappy Bird nauczył mnie podstaw RL. Snake BC pokazał sufit supervised learningu. Snake DQN nauczył generalizacji. Tetris zmusił mnie do myślenia poza standardowymi algorytmami. Racer nauczył skalowania. Prawdziwy samochód mnie upokorzyło.
 
-You don't need to follow this exact path. But you do need to build things — progressively harder things — and not just watch tutorials.
+Nie musisz iść dokładnie tą ścieżką. Ale musisz budować — coraz trudniejsze rzeczy — a nie tylko oglądać tutoriale.
 
-Start building.
+Zacznij budować.
 
 ---
 
-**Author:** [Beba-ai-ml](https://github.com/Beba-ai-ml) | **Site:** [stronabeby.pl](https://stronabeby.pl)
+**Autor:** [Beba-ai-ml](https://github.com/Beba-ai-ml) | **Strona:** [stronabeby.pl](https://stronabeby.pl)
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
